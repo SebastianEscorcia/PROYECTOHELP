@@ -45,16 +45,20 @@
   <ItemGroup>
     <Compile Include="Entidades\Estudiante.cs" />
     <Compile Include="Entidades\Grupo.cs" />
+    <Compile Include="Logica\IcrudEstudiante.cs" />
+    <Compile Include="Logica\IcrudGrupo.cs" />
+    <Compile Include="Logica\ServicioEstudiante.cs" />
+    <Compile Include="Logica\ServicioGrupo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\GUICrearEstudiante.cs" />
+    <Compile Include="Vista\GUICrearGrupo.cs" />
+    <Compile Include="Vista\MenuPrincipal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Ejercicio\la analogía entre Conjunto y Elemento con Grupo y Estudiante.pdf" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logica\" />
-    <Folder Include="Vista\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

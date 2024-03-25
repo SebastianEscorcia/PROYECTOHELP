@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Vista;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace Project
     {
         static void Main(string[] args)
         {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.MenuP();
         }
     }
 }
