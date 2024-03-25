@@ -19,6 +19,7 @@ namespace Project.Vista
             string apellido;
             char sexo;
             double promedio;
+            int edad;
             Console.WriteLine("Nombre:");
             nombre = Console.ReadLine();
             Console.WriteLine("Apellido:");
@@ -45,6 +46,8 @@ namespace Project.Vista
                 Console.ReadKey();
             } while (true);
             estudiante.Sexo = sexo;
+            Console.WriteLine("Edad:");
+            edad = int.Parse(Console.ReadLine());
             Console.WriteLine("Promedio:");
             promedio = double.Parse(Console.ReadLine());
             var mensaje = servicio.CrearEstudiante(estudiante);
