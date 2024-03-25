@@ -7,7 +7,14 @@ using System.Threading.Tasks;
 
 namespace Project.Logica
 {
-    public class ServicioGrupo : IcrudGrupo<Grupo>
+    public interface IServicioGroup
+    {
+        string CrearGrupo(Grupo Grupo);
+        //string AgregarEstudiante(List<T> M, List<T> N, Estudiante estudiante);
+        //List<T> Grupos();
+    }
+
+    public class ServicioGrupo : IServicioGroup
     {
         List<Grupo> grupos = new List<Grupo>();
         public string AgregarEstudiante(List<Grupo> M, List<Grupo> N, Estudiante estudiante)

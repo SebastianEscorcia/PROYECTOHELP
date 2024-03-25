@@ -24,7 +24,7 @@ namespace Project.Vista
                 Console.WriteLine("4.Operaciones entre conjuntos");
                 Console.WriteLine("5.Salir");
                 Console.WriteLine("Digita una opción:");
-                op = int.Parse((Console.ReadLine()));
+                op = Convert.ToInt32(Console.ReadLine());
                 switch (op)
                 {
                     case 1:
@@ -39,7 +39,7 @@ namespace Project.Vista
                         break;
                     case 3:
                         Console.Clear();
-                        
+
                         Console.ReadKey();
                         break;
                     case 4:
@@ -51,6 +51,31 @@ namespace Project.Vista
                         break;
                 }
             } while (op != 5);
+        }
+
+        private void AgregarEstudiante()
+        {
+
+        }
+
+        private void Pertenencia()
+        {
+
+        }
+
+        private void Union()
+        {
+
+        }
+
+        private void Interseccion()
+        {
+
+        }
+
+        private void Diferencia()
+        {
+
         }
 
     }

@@ -8,19 +8,16 @@ namespace Project.Entidades
 {
     public class Estudiante
     {
-        public int Edad {  get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public char Sexo { get; set; }
-        public double Promeido { get; set; }
-        public Estudiante() { }
-        public Estudiante(string nombre, string apellido, char sexo, double promedio, int edad)
-        {
-            Nombre = nombre;
-            Apellido = apellido;
-            Sexo = sexo;
-            Promeido = promedio;
-            Edad = edad;
-        }
+        private int edad;
+        private string nombre;
+        private string apellido;
+        private string sexo;
+        private double promedio;
+
+        public int Edad { get => edad; set => edad = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Apellido { get => apellido; set => apellido = value; }
+        public string Sexo { get => sexo; set => sexo = value; }
+        public double Promedio { get => promedio; set => promedio = value; }
     }
 }

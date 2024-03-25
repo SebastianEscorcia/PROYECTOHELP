@@ -7,24 +7,30 @@ using System.Threading.Tasks;
 
 namespace Project.Logica
 {
-    public class ServicioEstudiante : IcrudEstudiante<Estudiante>
+    public interface IServicioEstudiante
+    {
+        Estudiante CrearEstudiante(Estudiante estudiante);
+
+    }
+
+    public class ServicioEstudiante : IServicioEstudiante
     {
         List<Estudiante> estudiantes = new List<Estudiante>();
         public ServicioEstudiante()
         {
         }
-        public string CrearEstudiante(Estudiante estudiante)
+        public Estudiante CrearEstudiante(Estudiante estudiante)
         {
             try
             {
 
-                estudiantes.Add(estudiante);
-                return $" Se Registro el estudiante {estudiante.Nombre}";
+
+                return estudiante;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                return "Error al crear el estudiante";
+                return null;
             }
         }
     }

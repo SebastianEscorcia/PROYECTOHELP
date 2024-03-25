@@ -11,17 +11,17 @@ namespace Project.Vista
     public class GUICrearGrupo
     {
         ServicioGrupo servicioGrupo = new ServicioGrupo();
-        Grupo grupo = new Grupo();  
+        static Grupo grupo;
         public void CrearGrupo()
         {
             string nombre;
-            string id;
+            int id;
             Console.Clear();
             Console.WriteLine("Nombre");
             nombre = Console.ReadLine();
             grupo.Nombre = nombre;
             Console.WriteLine("ID:");
-            id = Console.ReadLine();
+            id = Convert.ToInt32(Console.ReadLine());
             grupo.Id = id;
             var mensaje = servicioGrupo.CrearGrupo(grupo);
             Console.WriteLine(mensaje);

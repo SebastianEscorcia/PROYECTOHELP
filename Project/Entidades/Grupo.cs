@@ -8,18 +8,21 @@ namespace Project.Entidades
 {
     public class Grupo
     {
-        public List<Estudiante> estudiantes;
-        public string Id { get; set; }
-        public string Nombre { get; set; }
-        public Grupo()
-        {
+        private List<Estudiante> estudiantes;
+        private int id;
+        private string nombre;
 
-        }
-        public Grupo(string id, string nombre)
+        public Grupo(int id, string nombre)
         {
-            Id = id;
-            Nombre = nombre;
+            this.id = id;
+            this.nombre = nombre;
+            this.estudiantes = null;
         }
+
+
+        public List<Estudiante> Estudiantes { get => estudiantes; set => estudiantes = value; }
+        public int Id { get => id; set => id = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
     }
 }
 
